@@ -21,6 +21,15 @@ layout: default
         {% include page-tags.html %}
         <div id="sidebar-desktop-ads">
           <script id="mNCC" language="javascript">
+            lastWindowWidth = window.innerWidth;
+            window.onresize = function(){
+              var windowWidth = window.innerWidth;
+              if ((lastWindowWidth >= 1024 && windowWidth < 1024) || (lastWindowWidth < 1024 && windowWidth >= 1024)) {
+                location.reload()
+              }
+              lastWindowWidth = windowWidth
+            }
+
             if (window.innerWidth >= 1024) {
               medianet_width='160';
               medianet_height= '600';
