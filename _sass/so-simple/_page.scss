@@ -232,6 +232,25 @@
     }
   }
 
+  .sidebar-desktop-ads {
+    display: none;
+    @include breakpoint($large) {
+      display: block;
+    }
+  }
+
+  .sidebar-mobile-ads {
+    display: block;
+    @include breakpoint($large) {
+      display: none;
+    }
+  }
+
+  @include breakpoint($large) {
+    grid-column: 1 / -1;
+    clear: both; // needed for floated layout
+  }
+
   .page-header {
     @include breakpoint($large) {
       grid-column: 1 / -1;
