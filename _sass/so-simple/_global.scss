@@ -78,6 +78,9 @@
   @include clearfix;
   margin-bottom: 3em;
   text-align: center;
+  @include breakpoint($medium) {
+    margin-bottom: 0.5em;
+  }
 }
 
 .site-title {
