@@ -19,32 +19,7 @@ layout: default
         {% include page-author.html %}
         {% include page-categories.html %}
         {% include page-tags.html %}
-        <div class="sidebar-ads ad-section">
-          <div class="ad-header ad-header-sidebar">Related Topics</div>
-          <script id="mNCC" language="javascript">
-            lastWindowWidth = window.innerWidth;
-            window.onresize = function(){
-              var windowWidth = window.innerWidth;
-              if ((lastWindowWidth >= 1024 && windowWidth < 1024) || (lastWindowWidth < 1024 && windowWidth >= 1024)) {
-                location.reload()
-              }
-              lastWindowWidth = windowWidth
-            }
-
-            if (window.innerWidth >= 1024) {
-              medianet_width='160';
-              medianet_height= '600';
-              medianet_crid = "367032336";
-            } else {
-              medianet_width=Math.min(728, window.innerWidth).toString();
-              medianet_height= '20';
-              medianet_crid = "351639462";
-            }
-
-            medianet_versionId = "3111299"; 
-          </script>
-          <script src="//contextual.media.net/nmedianet.js?cid=8CU4WBM36"></script>
-        </div>
+        
       </div>
 
       <div class="page-content">
@@ -55,25 +30,6 @@ layout: default
         {% if page.share %}
           {% include social-share.html %}
         {% endif %}
-
-        <div class="bottom-page-ads in-body-ads ad-secion">
-            <div class="ad-header ad-header-body">Related Topics</div>
-            <script id="mNCC" language="javascript">
-
-                if (window.innerWidth >= 1024) {
-                  medianet_width = "600";
-                  medianet_height = "250";
-                  medianet_crid = "459711728";
-                } else {
-                  medianet_width=Math.min(250, window.innerWidth).toString();
-                  medianet_height = "250";
-                  medianet_crid = "318234500";
-                }
-
-                medianet_versionId = "3111299"; 
-              </script>
-            <script src="//contextual.media.net/nmedianet.js?cid=8CU4WBM36"></script>
-        </div>
 
         {% if site.disqus.shortname %}
           {% include disqus-comments.html %}
